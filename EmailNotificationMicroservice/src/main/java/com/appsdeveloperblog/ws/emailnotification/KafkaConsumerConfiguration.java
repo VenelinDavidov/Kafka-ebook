@@ -48,7 +48,6 @@ public class KafkaConsumerConfiguration {
 		config.put(ConsumerConfig.GROUP_ID_CONFIG, environment.getProperty("consumer.group-id"));
 		config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, environment.getProperty("spring.kafka.consumer.auto-offset-reset"));
 
-
 		return new DefaultKafkaConsumerFactory<>(config);
 	}
 
