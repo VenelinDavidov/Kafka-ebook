@@ -66,12 +66,14 @@ public class KafkaConsumerConfiguration {
 		
 		return factory;
 	}
-	
+
+
 	@Bean
 	KafkaTemplate<String, Object> kafkaTemplate(ProducerFactory<String, Object> producerFactory) {
 		return new KafkaTemplate<>(producerFactory);
 	}
-	
+
+
 	@Bean
 	ProducerFactory<String, Object> producerFactory() {
 		Map<String, Object> config = new HashMap<>();
