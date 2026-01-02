@@ -23,6 +23,6 @@ public class ProductCreatedEventHandler {
 					   @Header("messageId") String messageId,
 			           @Header(KafkaHeaders.RECEIVED_KEY) String messageKey) {
 
-		LOGGER.info("Received a new event: " + productCreatedEvent.getTitle());
+		LOGGER.info("Received a new event " + productCreatedEvent.getTitle() + "with price  " + productCreatedEvent.getPrice());
 	}
 }
